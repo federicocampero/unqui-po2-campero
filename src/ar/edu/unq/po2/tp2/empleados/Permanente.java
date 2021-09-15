@@ -45,7 +45,7 @@ public class Permanente extends Empleado {
 		return this.getAntiguedad() * 100;
 	}	
 	private Boolean esCasado() {
-		return this.getEstadoCivil() == "Casado";
+		return this.getEstadoCivil().equals("Casado");
 	}
 	
 	@Override
