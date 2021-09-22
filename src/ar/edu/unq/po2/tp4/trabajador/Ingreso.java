@@ -6,26 +6,26 @@ public class Ingreso {
 	
 	private int mes;
 	private String concepto;
-	private double montoBrutoDelMes;
+	protected double montoPercibidoDelMes;
 	
 	public Ingreso(int mes, String concepto, double montoBrutoDelMes) {
 		super();
 		this.mes = mes;
 		this.concepto = concepto;
-		this.montoBrutoDelMes = montoBrutoDelMes;
+		this.montoPercibidoDelMes = montoBrutoDelMes;
 	}
 	
-	public double getMontoBrutoDelMes() {
-		return montoBrutoDelMes;
+	public double getMontoImponibleDelMes() {
+		return montoPercibidoDelMes;
 	}
 	
 	public double getImpuestoAPagarPorMes() {
 		double impuestoAlTrabajador = 2;
-		return Calculadora.getPorcentaje(this.getMontoBrutoDelMes(), impuestoAlTrabajador);
+		return Calculadora.getPorcentaje(this.getMontoImponibleDelMes(), impuestoAlTrabajador);
 	}
 	
-	public double getMontoNetoDelMes() {
-		return this.getMontoBrutoDelMes() - this.getImpuestoAPagarPorMes();
+	public double getMontoPercibidoDelMes() {
+		return this.getMontoImponibleDelMes() - this.getImpuestoAPagarPorMes();
 	}
 
 }

@@ -15,7 +15,7 @@ public class Trabajador {
 		double totalImponible = 0d;
 		
 		for(Ingreso ingreso : ingresos ) {
-			totalImponible += ingreso.getMontoBrutoDelMes();
+			totalImponible += ingreso.getMontoImponibleDelMes();
 		}
 		
 		return totalImponible;
@@ -26,7 +26,7 @@ public class Trabajador {
 		double totalPercibido = 0d;
 		
 		for(Ingreso ingreso : ingresos ) {
-			totalPercibido += ingreso.getMontoNetoDelMes();
+			totalPercibido += ingreso.getMontoPercibidoDelMes();
 		}
 		
 		return totalPercibido;

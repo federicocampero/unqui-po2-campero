@@ -18,9 +18,9 @@ class IngresoTest {
 		
 
 	@Test
-	void testgetMontoBrutoDelMes() {
+	void getMontoImponibleDelMes() {
 		
-		assertEquals(1000d, ingresoMarzo.getMontoBrutoDelMes());
+		assertEquals(1000d, ingresoMarzo.getMontoImponibleDelMes());
 	}
 	
 	@Test
@@ -30,9 +30,9 @@ class IngresoTest {
 	}
 	
 	@Test
-	void getMontoNetoDelMes() {
+	void getMontoPercibidoDelMes() {
 		
-		assertEquals(980d, ingresoMarzo.getMontoNetoDelMes());
+		assertEquals(980d, ingresoMarzo.getMontoPercibidoDelMes());
 	}
 
 }

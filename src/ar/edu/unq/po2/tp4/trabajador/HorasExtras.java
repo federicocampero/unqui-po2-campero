@@ -4,15 +4,14 @@ public class HorasExtras extends Ingreso {
 	
 	private int cantidadDeHoras;
 
-	public HorasExtras(int mes, String concepto, double montoPercibido, int cantidadDeHoras) {
-		super(mes, concepto, montoPercibido);
+	public HorasExtras(int mes, String concepto, double montoPercibidoDelMes, int cantidadDeHoras) {
+		super(mes, concepto, montoPercibidoDelMes);
 		this.cantidadDeHoras = cantidadDeHoras;
 	}
 	
 	@Override
-	public double getMontoNetoDelMes() {
-		
-		return this.getMontoBrutoDelMes();
+	public double getMontoImponibleDelMes() {
+		return 0;
 	}
 	
 	@Override
@@ -21,9 +20,8 @@ public class HorasExtras extends Ingreso {
 	}
 	
 	@Override
-	public double getMontoBrutoDelMes() {
-		// TODO Auto-generated method stub
-		return super.getMontoBrutoDelMes();
+	public double getMontoPercibidoDelMes() {
+		return montoPercibidoDelMes;
 	}
 	
 	
