@@ -8,12 +8,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import ar.edu.unq.po2.tp4.ProductoPrimeraNecesidad;
+import ar.edu.unq.po2.varios.Calculadora;
 
 class TrabajadorTest {
 	
-	/*
+	
 
-	private Trabajador trajador1;
+	private Trabajador trabajador1;
 	private ArrayList<Ingreso> ingresos;
 	private ArrayList<Integer> ad;
 	private Ingreso ingresoEnero;
@@ -24,28 +25,35 @@ class TrabajadorTest {
 	@BeforeEach
 	public void setUp() {
 		
-		trajador1 = new Trabajador();
-		ingresoEnero = new Ingreso(1, "honorario", 1000d);
-		ingresoFebrero = new Ingreso(2, "honorario", 1000d);
+		trabajador1 = new Trabajador();
+		ingresoEnero = new Ingreso(1, "basico", 1000d);
+		ingresoFebrero = new Ingreso(2, "basico", 1000d);
 		horasExtrasEnero = new HorasExtras(1,"horas Extras", 200d,10);
+		
+		trabajador1.agregarIngreso(ingresoEnero);
+		trabajador1.agregarIngreso(ingresoFebrero);
+		trabajador1.agregarIngreso(horasExtrasEnero);
 		
 	}
 	
 	@Test
 	public void testGetTotalPercibido() {
-		assertEquals(, leche.getPrecio());
+		double amount = trabajador1.getTotalPercibido();
+		assertEquals(2160d, amount);
 	}
 	
 	@Test
 	public void testGetMontoImponible() {
-		assertEquals(2000d, leche.getPrecio());
+		assertEquals(2000d, trabajador1.getMontoImponible());
 	}
 	
 	@Test
 	public void testGetImpuestoAPagar() {
-		assertEquals(7.2d, leche.getPrecio());
+		double amount = trabajador1.getImpuestoAPagar();
+		
+		assertEquals(40d, amount);
 	}
 	
-	*/
+	
 
 }
